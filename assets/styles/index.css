@@ -1,0 +1,57 @@
+@import url(variables.css);
+
+
+body{
+    background-image: url(../img/Background\ \(1\).png);
+
+    display: flex;
+    justify-content: center;
+
+    font-family: var(--ff-inter);
+    color: var(--blue-900);
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+}
+
+.card-container{
+    background-color: var(--blue-300);
+    padding: 56px 64px;
+    border-radius: 8px;
+    border: 2px solid var(--blue-500);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-size: var(--fs-label);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    font-family: var(--ff-button);
+    font-family: var(--ff-inter);
+    color: var(--white);
+    background-color: var(--blue-600);
+    border-radius: 8px;
+    padding: 16px 40px;
+    border: none;
+}
+
+input{
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: var(--blue-200);
+    border: 2px solid var(--blue-400);
+}
