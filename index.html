@@ -16,31 +16,37 @@
     <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
-    <div class="body_container">
-        <div class="logo-container">
-            <img src="assets/img/logo.svg" alt="Logo">
-        </div>
-        <div class="card-container">
-            <div class="labels flex">
-                <label for="valor">VALOR</label>
-                <input type="text" placeholder="0,00">
+        <div class="form">
+            <div class="logo-container">
+                <img src="assets/img/logo.svg" alt="Logo">
             </div>
-            <div class="type-coin flex">
-                <label for="coin">MOEDA</label>
-                <select name="coin" id="coin">
-                    <option value="" disabled selected>Selecione a moeda</option>
-                    <option value="USD">Dólar Americano</option>
-                    <option value="EUR">Euro</option>
-                    <option value="JPY">Iene japonês</option>
-                    <option value="ARS">Peso argentino</option>
-                    <option value="CNY">Yuan chinês</option>
-                </select>
-            </div>
+    <main>
+            <div class="card-container">
+                <div class="labels flex">
+                    <label id="label-text-color" for="valor">VALOR</label>
+                    <input type="text" placeholder="0,00">
+                </div>
+                <div class="type-coin flex">
+                    <label for="coin">MOEDA</label>
+                    <select name="coin" id="coin">
+                        <option value="" disabled selected>Selecione a moeda</option>
+                        <option value="USD">Dólar Americano</option>
+                        <option value="EUR">Euro</option>
+                        <option value="JPY">Iene japonês</option>
+                        <option value="ARS">Peso argentino</option>
+                        <option value="CNY">Yuan chinês</option>
+                    </select>
+                </div>
 
-            <div class="btn-container">
-                <button>Converter em reais</button>
+                <div class="btn-container">
+                    <button type="submit">Converter em reais</button>
+                </div>
             </div>
-        </div>
-    </div>
+        </form>
+        <footer>
+            <span id="description">US$ 1 = R$ 4,86</span>
+            <h1 id="result">486,00 Reais</h1>
+        </footer>
+    </main>
 </body>
 </html>
