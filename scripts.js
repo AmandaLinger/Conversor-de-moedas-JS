@@ -1,3 +1,13 @@
+//cotação da moeda do dia
+const USD = 5.34;
+const EUR = 6.18;
+const CNY = 0.75;
+const ARS = 0.0037;
+const JPY = 0.034;
+
+
+
+
 const form = document.querySelector("form")
 
 const amount = document.getElementById("amount");
@@ -15,5 +25,30 @@ amount.addEventListener("input", () => {
 //capturando o evento de submite do formulário
 form.onsubmit = (event) => {
     event.preventDefault();
-    console.log(coin.value)
+    switch (coin.value){
+        case "USD": 
+            convertCoin(amount.value, USD,"US$")
+            break;
+
+        case "EUR":
+            convertCoin(amount.value,EUR,"€")
+            break;
+
+        case "CNY":
+            convertCoin(amount.value, CNY,"¥")
+            break;
+
+        case "JPY":
+            convertCoin(amount.value, JPY,"¥")
+            break;
+
+        case "ARS":
+            convertCoin(amount.value, ARS,"$")
+            break;
+    }
+}
+
+//função para converter a moeda
+function convertCoin (amount, price,symbol){
+    console.log(amount,price,symbol)
 }
