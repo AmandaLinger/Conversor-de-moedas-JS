@@ -52,6 +52,21 @@ button{
 input{
     padding: 16px 20px;
     border-radius: 8px;
+    color: var(--blue-900);
     background-color: var(--blue-200);
     border: 2px solid var(--blue-400);
+}
+
+input ::placeholder{
+    color: var(--blue-900);
+}
+
+select{
+    padding: 16px 20px;
+
+    border-radius: 8px;
+    color: var(--blue-900);
+    background-color: var(--blue-200);
+    border: 2px solid var(--blue-400);
+    
 }
