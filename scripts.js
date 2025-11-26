@@ -8,10 +8,11 @@ const JPY = 0.034;
 
 
 
-const form = document.querySelector("form")
+const form = document.querySelector("form");
 
 const amount = document.getElementById("amount");
-const coin = document.getElementById("coin")
+const coin = document.getElementById("coin");
+const footer = document.querySelector("main footer")
 
 //manipulando o input amount para receber apenas numeros
 amount.addEventListener("input", () => {
@@ -50,5 +51,12 @@ form.onsubmit = (event) => {
 
 //função para converter a moeda
 function convertCoin (amount, price,symbol){
-    console.log(amount,price,symbol)
+    try{
+        //aplica a classe que exibe o footer
+        footer.classList.add("show-result")
+    }catch (error){
+        console.log(error)
+        footer.classList.remove("show-result")
+        alert("Não foi possível converter. Tente novamente mais tarde")
+    }
 }

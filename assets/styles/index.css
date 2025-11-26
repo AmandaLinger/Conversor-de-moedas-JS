@@ -99,21 +99,27 @@ select:focus{
     outline: none;
 }
 
-footer{
-    background-color: var(--blue-400);
-    padding:20px 40px;
-    gap: 6px;
+footer {
+  background-color: #1f2151;
+  padding: 2rem;
+  max-height: 196px;
 
-    display: none;
-
-    flex-direction: column;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
+  display: none;
 }
+
+.show-result {
+  display: block;
+}
+
+
 #description{
     font-family: var(--ff-ibm);
     color: var(--blue-800);
     display: flex;
     align-self: center;
+    justify-content: center;
 }
 
 #result{
@@ -122,4 +128,9 @@ footer{
 
     display: flex;
     align-self: center;
+    justify-content: center;
+}
+
+.show-result{
+    display: block;
 }
