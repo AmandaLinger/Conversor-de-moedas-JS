@@ -43,17 +43,14 @@ form.onsubmit = (event) => {
         case "JPY":
             convertCoin(amount.value, JPY,"¥")
             break;
-
-        case "ARS":
-            convertCoin(amount.value, ARS,"$")
-            break;
     }
 }
 
 //função para converter a moeda
 function convertCoin (amount, price,symbol){
     try{
-        description.textContent = `${symbol} 1 = ${price}`
+        //exibindo a cotação da moeda selecionada
+        description.textContent = `${symbol} 1 = ${formatCoinBRL(price)}`
 
         //aplica a classe que exibe o footer
         footer.classList.add("show-result")
@@ -62,4 +59,13 @@ function convertCoin (amount, price,symbol){
         footer.classList.remove("show-result")
         alert("Não foi possível converter. Tente novamente mais tarde")
     }
+}
+
+
+//formata a moeda em real brasileiro
+function formatCoinBRL(value){
+    return Number(value).toLocaleString("pt-BR",{
+        style: "currency",
+        currency: "BRL"
+    })
 }
