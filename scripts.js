@@ -14,6 +14,7 @@ const amount = document.getElementById("amount");
 const coin = document.getElementById("coin");
 const footer = document.querySelector("main footer");
 const description = document.getElementById("description");
+const result = document.getElementById("result");
 
 //manipulando o input amount para receber apenas numeros
 amount.addEventListener("input", () => {
@@ -51,6 +52,11 @@ function convertCoin (amount, price,symbol){
     try{
         //exibindo a cotação da moeda selecionada
         description.textContent = `${symbol} 1 = ${formatCoinBRL(price)}`
+
+        let total = amount * price;
+
+        //substitui o valor no html pela variavel total
+        result.textContent = total;
 
         //aplica a classe que exibe o footer
         footer.classList.add("show-result")
