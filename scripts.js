@@ -53,10 +53,18 @@ function convertCoin (amount, price,symbol){
         //exibindo a cotação da moeda selecionada
         description.textContent = `${symbol} 1 = ${formatCoinBRL(price)}`
 
-        let total = amount * price;
+        let total = amount * price
+
+        //verifica se o resultado não é um número
+        if(isNaN(total)){
+            return alert ("Por favor, digite o valor corretamente para converter")
+        }
+
+        //formatar o valor total
+        total = formatCoinBRL(total).replace("R$", "")
 
         //substitui o valor no html pela variavel total
-        result.textContent = total;
+        result.textContent = `${total} Reais`;
 
         //aplica a classe que exibe o footer
         footer.classList.add("show-result")
